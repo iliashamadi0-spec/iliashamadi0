@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مـتـصـفــح julian djellouli</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #2F4F4F;
+            color: white;
+        }
+        .header {
+            background-color: #333;
+            padding: 10px;
+        }
+        .content {
+            margin: 20px;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>مـتـصـفــح julian djellouli</h1>
+    </div>
+    <div class="content">
+        <input type="text" id="searchQuery" placeholder="أدخل كلمة البحث">
+        <button onclick="searchGoogle()">بحث جوجل</button>
+        <div>
+            <button onclick="window.history.back()">رجوع</button>
+            <button onclick="window.history.forward()">تقدم</button>
+            <button onclick="window.location.reload()">تحديث</button>
+        </div>
+    </div>
+    <div class="footer">
+        by julian. Dz
+    </div>
+
+    <script>
+        function searchGoogle() {
+            var query = document.getElementById('searchQuery').value;
+            if (query) {
+                window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            }
+        }
+    </script>
+</body>
+</html>
